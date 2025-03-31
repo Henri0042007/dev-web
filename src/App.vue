@@ -8,6 +8,10 @@ function incrementar() {
 function decrementar() {
   contador.value--
 }
+function zero() {
+    contador.value -= contador.value;
+}
+
 </script>
 
 <template>
@@ -15,6 +19,7 @@ function decrementar() {
   <p>Valor do contador: {{ contador }}</p>
   <button v-on:click="incrementar">+</button>
   <button @click="decrementar">-</button>
+  <button @click="zero">zerar</button>
 </template>
 
 <style scoped>
